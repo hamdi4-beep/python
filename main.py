@@ -1,8 +1,8 @@
-from urllib.request import urlopen
+def fib(n: int) -> None:
+    a, b = 0, 1
 
-with urlopen('http://api.github.com/users/hamdi4-beep') as response:
-    for header in response.getheaders():
-        key, value = header
+    while a < n:
+        print(f'a: {a}, b: {b}')
+        a, b = b, a + b
 
-        if key == 'Last-Modified':
-            print(header)
+fib(10)
