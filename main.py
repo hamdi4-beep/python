@@ -1,8 +1,11 @@
-def fib(n: int) -> None:
-    a, b = 0, 1
+from tkinter import *
+from tkinter import ttk
 
-    while a < n:
-        print(f'a: {a}, b: {b}')
-        a, b = b, a + b
+root = Tk()
+root.title('Python Application')
+root.geometry('800x600')
 
-fib(10)
+frame = ttk.Frame(root, padding=20)
+frame.grid()
+
+root.mainloop()
