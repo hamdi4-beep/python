@@ -1,26 +1,22 @@
-import pyautogui
+from urllib.request import *
+from html.parser import HTMLParser
 
-# opens up the search bar
-pyautogui.hotkey('win', 's')
+url = 'https://pyautogui.readthedocs.io/en/latest/'
+f = open('links.txt', 'w+')
 
-# types in Notepad
-pyautogui.write('Notepad')
+class Parser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        if tag != 'a':
+            return
 
-# launch the app
-pyautogui.press('enter')
+        for attr in attrs:
+            key, value = attr
+            f.write(f'{value}\n')
 
-# delays a few seconds before it starts writing into the file
-pyautogui.sleep(3)
+parser = Parser()
 
-# writes something into the app
-pyautogui.typewrite('Whoa! I can launch and use apps without having to do that manually.')
+with urlopen(url) as response:
+    buffer = response.read()
+    parser.feed(buffer.decode())
 
-# selects everything that was written
-pyautogui.hotkey('ctrl', 'a')
-
-# waits a few seconds before deleting selected text
-pyautogui.sleep(4)
-pyautogui.press('backspace')
-
-# exists the notepad
-pyautogui.hotkey('alt', 'f4')
+f.close()

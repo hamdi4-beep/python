@@ -1,0 +1,137 @@
+#
+icon icon-home
+reference internal
+install.html
+reference internal
+quickstart.html
+reference internal
+mouse.html
+reference internal
+keyboard.html
+reference internal
+msgbox.html
+reference internal
+screenshot.html
+reference internal
+tests.html
+reference internal
+roadmap.html
+reference internal
+source/modules.html
+#
+#
+https://github.com/asweigart/pyautogui/blob/master/docs/index.rst
+fa fa-github
+headerlink
+#welcome-to-pyautogui-s-documentation
+Permalink to this headline
+reference internal
+install.html
+reference external
+https://github.com/asweigart/pyautogui
+reference external
+https://www.youtube.com/watch?v=lfk_T6VKhTE
+headerlink
+#examples
+Permalink to this headline
+headerlink
+#faq-frequently-asked-questions
+Permalink to this headline
+reference external
+mailto:al%40inventwithpython.com
+headerlink
+#fail-safes
+Permalink to this headline
+reference internal
+install.html
+reference internal
+install.html#windows
+reference internal
+install.html#macos
+reference internal
+install.html#linux
+reference internal
+quickstart.html
+reference internal
+quickstart.html#general-functions
+reference internal
+quickstart.html#fail-safes
+reference internal
+quickstart.html#mouse-functions
+reference internal
+quickstart.html#keyboard-functions
+reference internal
+quickstart.html#message-box-functions
+reference internal
+quickstart.html#screenshot-functions
+reference internal
+mouse.html
+reference internal
+mouse.html#the-screen-and-mouse-position
+reference internal
+mouse.html#mouse-movement
+reference internal
+mouse.html#mouse-drags
+reference internal
+mouse.html#tween-easing-functions
+reference internal
+mouse.html#mouse-clicks
+reference internal
+mouse.html#the-mousedown-and-mouseup-functions
+reference internal
+mouse.html#mouse-scrolling
+reference internal
+keyboard.html
+reference internal
+keyboard.html#the-write-function
+reference internal
+keyboard.html#the-press-keydown-and-keyup-functions
+reference internal
+keyboard.html#the-hold-context-manager
+reference internal
+keyboard.html#the-hotkey-function
+reference internal
+keyboard.html#keyboard-keys
+reference internal
+msgbox.html
+reference internal
+msgbox.html#the-alert-function
+reference internal
+msgbox.html#the-confirm-function
+reference internal
+msgbox.html#the-prompt-function
+reference internal
+msgbox.html#the-password-function
+reference internal
+screenshot.html
+reference internal
+screenshot.html#the-screenshot-function
+reference internal
+screenshot.html#the-locate-functions
+reference internal
+tests.html
+reference internal
+tests.html#platforms-tested
+reference internal
+roadmap.html
+reference internal
+source/modules.html
+reference internal
+source/pyautogui.html
+headerlink
+#indices-and-tables
+Permalink to this headline
+reference internal
+genindex.html
+reference internal
+py-modindex.html
+reference internal
+search.html
+install.html
+btn btn-neutral float-right
+Installation
+n
+next
+http://sphinx-doc.org/
+https://github.com/rtfd/sphinx_rtd_theme
+https://readthedocs.org
