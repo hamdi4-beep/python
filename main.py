@@ -1,19 +1,26 @@
-from tkinter import *
-from tkinter import ttk
+import pyautogui
 
-# creates the parent window
-root = Tk()
-root.title('Python Application')
-# sets the window's width and height
-root.geometry('800x600')
+# opens up the search bar
+pyautogui.hotkey('win', 's')
 
-# creates the frame
-frame = ttk.Frame(root, padding=10)
-# registers the frame with the grid manager
-frame.grid()
+# types in Notepad
+pyautogui.write('Notepad')
 
-# creates a button widget
-btn = ttk.Button(root, text='Quit application', command=root.destroy)
-btn.grid()
+# launch the app
+pyautogui.press('enter')
 
-root.mainloop()
+# delays a few seconds before it starts writing into the file
+pyautogui.sleep(3)
+
+# writes something into the app
+pyautogui.typewrite('Whoa! I can launch and use apps without having to do that manually.')
+
+# selects everything that was written
+pyautogui.hotkey('ctrl', 'a')
+
+# waits a few seconds before deleting selected text
+pyautogui.sleep(4)
+pyautogui.press('backspace')
+
+# exists the notepad
+pyautogui.hotkey('alt', 'f4')
