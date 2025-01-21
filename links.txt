@@ -1,137 +1,75 @@
-#
-icon icon-home
-reference internal
-install.html
-reference internal
-quickstart.html
-reference internal
-mouse.html
-reference internal
-keyboard.html
-reference internal
-msgbox.html
-reference internal
-screenshot.html
-reference internal
-tests.html
-reference internal
-roadmap.html
-reference internal
-source/modules.html
-#
-#
-https://github.com/asweigart/pyautogui/blob/master/docs/index.rst
-fa fa-github
-headerlink
-#welcome-to-pyautogui-s-documentation
-Permalink to this headline
-reference internal
-install.html
-reference external
-https://github.com/asweigart/pyautogui
-reference external
-https://www.youtube.com/watch?v=lfk_T6VKhTE
-headerlink
-#examples
-Permalink to this headline
-headerlink
-#faq-frequently-asked-questions
-Permalink to this headline
-reference external
-mailto:al%40inventwithpython.com
-headerlink
-#fail-safes
-Permalink to this headline
-reference internal
-install.html
-reference internal
-install.html#windows
-reference internal
-install.html#macos
-reference internal
-install.html#linux
-reference internal
-quickstart.html
-reference internal
-quickstart.html#general-functions
-reference internal
-quickstart.html#fail-safes
-reference internal
-quickstart.html#mouse-functions
-reference internal
-quickstart.html#keyboard-functions
-reference internal
-quickstart.html#message-box-functions
-reference internal
-quickstart.html#screenshot-functions
-reference internal
-mouse.html
-reference internal
-mouse.html#the-screen-and-mouse-position
-reference internal
-mouse.html#mouse-movement
-reference internal
-mouse.html#mouse-drags
-reference internal
-mouse.html#tween-easing-functions
-reference internal
-mouse.html#mouse-clicks
-reference internal
-mouse.html#the-mousedown-and-mouseup-functions
-reference internal
-mouse.html#mouse-scrolling
-reference internal
-keyboard.html
-reference internal
-keyboard.html#the-write-function
-reference internal
-keyboard.html#the-press-keydown-and-keyup-functions
-reference internal
-keyboard.html#the-hold-context-manager
-reference internal
-keyboard.html#the-hotkey-function
-reference internal
-keyboard.html#keyboard-keys
-reference internal
-msgbox.html
-reference internal
-msgbox.html#the-alert-function
-reference internal
-msgbox.html#the-confirm-function
-reference internal
-msgbox.html#the-prompt-function
-reference internal
-msgbox.html#the-password-function
-reference internal
-screenshot.html
-reference internal
-screenshot.html#the-screenshot-function
-reference internal
-screenshot.html#the-locate-functions
-reference internal
-tests.html
-reference internal
-tests.html#platforms-tested
-reference internal
-roadmap.html
-reference internal
-source/modules.html
-reference internal
-source/pyautogui.html
-headerlink
-#indices-and-tables
-Permalink to this headline
-reference internal
-genindex.html
-reference internal
-py-modindex.html
-reference internal
-search.html
-install.html
-btn btn-neutral float-right
-Installation
-n
-next
-http://sphinx-doc.org/
-https://github.com/rtfd/sphinx_rtd_theme
-https://readthedocs.org
+rel: prefetch
+href: //ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js
+
+rel: prefetch
+href: //ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js
+
+href: /static/stylesheets/style.08a078d0aa02.css
+rel: stylesheet
+type: text/css
+media: all
+title: default
+
+href: /static/stylesheets/mq.31ede2afc427.css
+rel: stylesheet
+type: text/css
+media: not print, braille, embossed, speech, tty
+
+href: /static/stylesheets/no-mq.bf0c425cdb73.css
+rel: stylesheet
+type: text/css
+media: screen
+
+rel: stylesheet
+href: //ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css
+
+rel: icon
+type: image/x-icon
+href: /static/favicon.ico
+
+rel: apple-touch-icon-precomposed
+sizes: 144x144
+href: /static/apple-touch-icon-144x144-precomposed.png
+
+rel: apple-touch-icon-precomposed
+sizes: 114x114
+href: /static/apple-touch-icon-114x114-precomposed.png
+
+rel: apple-touch-icon-precomposed
+sizes: 72x72
+href: /static/apple-touch-icon-72x72-precomposed.png
+
+rel: apple-touch-icon-precomposed
+href: /static/apple-touch-icon-precomposed.png
+
+rel: apple-touch-icon
+href: /static/apple-touch-icon-precomposed.png
+
+rel: author
+href: /humans.txt
+
+rel: alternate
+type: application/rss+xml
+title: Python Enhancement Proposals
+href: https://peps.python.org/peps.rss
+
+rel: alternate
+type: application/rss+xml
+title: Python Job Opportunities
+href: https://www.python.org/jobs/feed/rss/
+
+rel: alternate
+type: application/rss+xml
+title: Python Software Foundation News
+href: https://feeds.feedburner.com/PythonSoftwareFoundationNews
+
+rel: alternate
+type: application/rss+xml
+title: Python Insider
+href: https://feeds.feedburner.com/PythonInsider
+
+rel: alternate
+type: application/rss+xml
+title: Python Releases
+href: https://www.python.org/downloads/feed.rss
+
