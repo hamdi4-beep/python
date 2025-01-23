@@ -1,13 +1,11 @@
-from tkinter import *
-from tkinter import ttk
+import socket
 
-tk = Tk()
-tk.title('Python GUI')
-tk.geometry('800x600')
+# creates a socket object
+s = socket.socket()
+s.bind((socket.gethostname(), 3000))
 
-frame = ttk.Frame(tk)
-frame.pack()
+s.listen(1)
 
-tk.bind('<Key-Return>', lambda self: print('You pressed the return key!'))
-
-tk.mainloop()
+while True:
+    (client, address) = s.accept()
+    print(client.recv(1024))
