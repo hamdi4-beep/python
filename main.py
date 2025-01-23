@@ -1,29 +1,13 @@
-from urllib.request import Request, urlopen
-from html.parser import HTMLParser
+from tkinter import *
+from tkinter import ttk
 
-f = open('images.txt', 'w+')
-URL = 'https://en.wikipedia.org/wiki/PlayStation_4'
+tk = Tk()
+tk.title('Python GUI')
+tk.geometry('800x600')
 
-class Parser(HTMLParser):
-    def __init__(self, *, convert_charrefs = True):
-        super().__init__(convert_charrefs=convert_charrefs)
+frame = ttk.Frame(tk)
+frame.pack()
 
-    def handle_startendtag(self, tag, attrs):
-        if tag != 'img':
-            return
-        
-        for key, value in attrs:
-            if not value.startswith('/'):
-                return
-            
-            f.write(f'https:{value}\n')
+tk.bind('<Key-Return>', lambda self: print('You pressed the return key!'))
 
-        f.write('\n')
-
-parser = Parser()
-
-with urlopen(Request(URL)) as response:
-    data = response.read()
-    parser.feed(data.decode())
-
-f.close()
+tk.mainloop()
