@@ -1,11 +1,18 @@
-import socket
+import sqlite3
 
-# creates a socket object
-s = socket.socket()
-s.bind((socket.gethostname(), 3000))
+conn = sqlite3.connect(':memory:')
+curr = conn.cursor()
 
-s.listen(1)
+curr.execute("CREATE TABLE user (username, id)")
 
-while True:
-    (client, address) = s.accept()
-    print(client.recv(1024))
+curr.execute(
+    """
+        INSERT INTO user VALUES
+            ('hamdi4-beep', 8)
+    """
+)
+
+conn.commit()
+
+res = curr.execute("SELECT username, id FROM user")
+print(res.fetchall())
