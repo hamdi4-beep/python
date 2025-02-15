@@ -1,29 +1,14 @@
-import sqlite3
+from abc import ABC, abstractmethod
 
-# creates a database connection
-conn = sqlite3.connect(':memory:')
+def decorator(cls):
+    class BaseClass(cls):
+        def __init__(self):
+            print('Instantiated a newly created object of the BaseClass')
 
-# creates a cursor object
-curr = conn.cursor()
+    return BaseClass
 
-# creates a user table
-curr.execute("CREATE TABLE user (username, age)")
+@decorator
+class SubClass:
+    pass
 
-# insert values into the table
-curr.execute(
-    """
-        INSERT INTO user VALUES
-            ('hamdi4-beep', 27)
-    """
-)
-
-# commits the changes to the database
-conn.commit()
-
-res = curr.execute("SELECT username, age FROM user")
-
-# retreives values from the database
-username, age = res.fetchone()
-print(f'{username} is {age} years old!')
-
-conn.close()
+o = SubClass()
