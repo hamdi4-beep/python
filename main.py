@@ -1,14 +1,12 @@
-from abc import ABC, abstractmethod
-
 def decorator(cls):
-    class BaseClass(cls):
-        def __init__(self):
-            print('Instantiated a newly created object of the BaseClass')
-
-    return BaseClass
+    return type('', (cls,), {
+        'method': lambda self:
+            print('A method implementation')
+    })
 
 @decorator
-class SubClass:
+class BaseClass:
     pass
 
-o = SubClass()
+o = BaseClass()
+o.method()
