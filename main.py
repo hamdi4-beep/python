@@ -1,11 +1,40 @@
-set_one = {1, 3, 2, 5, 4}
-set_two = {5, 4, 1, 6, 3}
+import requests, time
 
-# The onion operation creates a new set that combines unique values from both sets.
-print(set_one | set_two)
+def measure_time(func):
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        ret = func(*args, **kwargs)
 
-# The intersection operation creates a new set with unique values that only exist in both sets.
-print(set_one & set_two)
+        print(f'{func.__name__} took {time.perf_counter() - start} seconds\n')
 
-# The difference operation creates a new set with unique values that only exist in the first set.
-print(set_one - set_two)
+        return ret
+
+    return wrapper
+
+@measure_time
+def fetch_url(session, url):
+    try:
+        with session.get(url, stream=True) as response:
+            response.raise_for_status()
+            total = 0
+
+            for chunk in response.iter_content(chunk_size=8192):
+                total += len(chunk)
+
+            print(f'Fetched {total} bytes from {url}')
+            return total
+    except Exception as ex:
+        print(f'Something went wrong fetching {url}: {ex}')
+
+def main():
+    urls = [
+        'https://python.org',
+        'http/github',
+        'https://javascript.info'
+    ]
+
+    with requests.Session() as session:
+        print([fetch_url(session, url) for url in urls])
+
+if __name__ == '__main__':
+    main()
